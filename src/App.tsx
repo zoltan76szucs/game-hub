@@ -14,12 +14,22 @@ function App() {
         xl: `"nav nav" "aside main"`,
         "2xl": `"nav nav" "aside main"`,
       }}
+      templateColumns={{
+        base: "1fr",
+        sm: "200px 1fr",
+        md: "200px 1fr",
+        lg: "200px 1fr",
+        xl: "200px 1fr",
+        "2xl": "200px 1fr",
+      }}
     >
       <GridItem area="nav">
         <NavBar></NavBar>
       </GridItem>
       <Show above="lg">
-        <GridItem area="aside"><GenreList></GenreList></GridItem>
+        <GridItem area="aside" paddingX={5}>
+          <GenreList></GenreList>
+        </GridItem>
       </Show>
       <GridItem area="main">
         <GameGrid></GameGrid>
