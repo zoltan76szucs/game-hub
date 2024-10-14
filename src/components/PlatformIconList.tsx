@@ -34,7 +34,11 @@ const PlatformIconList = ({ paltform }: Props) => {
       {" "}
       {paltform.map((platform) => (
         // <Text>{platform.name}</Text>
-        <Icon as={iconMap[platform.slug]} color="gray.500"></Icon>
+        <Icon
+          key={platform.id}
+          as={iconMap[platform.slug]}
+          color="gray.500"
+        ></Icon>
       ))}
     </HStack>
   );
