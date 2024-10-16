@@ -10,7 +10,7 @@ interface FetchResponse<T> {
 const useData = <T>(
   endpoint: string,
   requestConfig?: AxiosRequestConfig,
-  deps?: amy[]
+  deps?: any[]
 ) => {
   const [data, setData] = useState<T[]>([]);
   const [error, setError] = useState("");
@@ -18,6 +18,7 @@ const useData = <T>(
 
   useEffect(
     () => {
+      setError("");
       const controller = new AbortController();
 
       setLoading(true);
