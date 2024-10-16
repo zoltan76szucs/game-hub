@@ -1,5 +1,3 @@
-import { data } from "framer-motion/m";
-import useData from "./useData";
 import genres from "../data/genres";
 
 export interface Genre {
