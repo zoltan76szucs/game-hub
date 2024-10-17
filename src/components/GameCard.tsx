@@ -1,4 +1,3 @@
-
 import { Game } from "../hooks/useGames";
 import { Card, CardBody, Heading, HStack, Image } from "@chakra-ui/react";
 import PlatformIconList from "./PlatformIconList";
@@ -16,7 +15,7 @@ const GameCard = ({ game }: gameProps) => {
       <CardBody>
         <HStack justifyContent={"space-between"} marginBottom={3}>
           <PlatformIconList
-            paltform={game.parent_platforms.map(
+            paltform={game.parent_platforms?.map(
               (platforms) => platforms.platform
             )}
           ></PlatformIconList>
